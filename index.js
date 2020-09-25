@@ -1,13 +1,18 @@
-function driveupload(options) {
+$(document).ready(function driveupload(options) {
+  // let redirect_uri = 'http://127.0.0.1:5500/upload.html';
+  // let client_id = '571272215300-244pkdu9ipqblh5cbul452phrh6nkth1.apps.googleusercontent.com';
+  // var clientId = "571272215300-244pkdu9ipqblh5cbul452phrh6nkth1.apps.googleusercontent.com";
+  // let client_secret = 'JX_4Pi6pQHXwNSzMkJnsmU19';
+  //   let button_one = options.buttonOne;
+  //   let button_two = options.buttonTwo;
+  //   let image_input = options.imageInput;
   let redirect_uri = options.redirectUri;
-  let clientId = options.clientId;
-  let client_secret = options.clientSecret;
-  //   let button_one = '#login';
-  //   let button_two = '#upload';
-  //   let image_input = '#files';
-  let button_one = options.buttonOne;
-  let button_two = options.buttonTwo;
-  let image_input = options.imageInput;
+  let client_id =  options.clientId;
+  var clientId =  options.clientId;
+  let client_secret =  options.clientSecret;
+  let button_one = "#login";
+  let button_two = "#upload";
+  let image_input = "#files";
 
   // ==================================================================================>
 
@@ -15,7 +20,7 @@ function driveupload(options) {
   var url = "";
   const urlParams = new URLSearchParams(window.location.search);
   const code = urlParams.get("code");
-  const scope = "https://www.googleapis.com/auth/drive";
+  //   const scope = "https://www.googleapis.com/auth/drive";
   var access_token = "";
 
   // ==================================================================================>
@@ -150,6 +155,6 @@ function driveupload(options) {
     // execute upload
     upload.doUpload();
   });
-}
+});
 
-module.exports.driveupload = driveupload;
+// module.exports.driveupload = driveupload;
